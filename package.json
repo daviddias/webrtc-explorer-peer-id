@@ -1,0 +1,34 @@
+{
+  "name": "webrtc-chord-uuid",
+  "version": "1.0.0",
+  "description": "webrtc-chord unique Ids generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diasdavid/webrtc-chord-uuid.git"
+  },
+  "keywords": [
+    "uuid",
+    "chord",
+    "unique",
+    "id",
+    "sha1"
+  ],
+  "author": "David Dias <daviddias.p@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diasdavid/webrtc-chord-uuid/issues"
+  },
+  "homepage": "https://github.com/diasdavid/webrtc-chord-uuid",
+  "dependencies": {
+    "git-sha1": "^0.1.2"
+  },
+  "devDependencies": {
+    "code": "^1.2.1",
+    "lab": "^5.0.2",
+    "tap-spec": "^1.0.1"
+  }
+}
