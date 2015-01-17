@@ -1,34 +1,48 @@
 {
-  "name": "webrtc-chord-uuid",
+  "name": "dht-id",
   "version": "1.0.0",
-  "description": "webrtc-chord unique Ids generator",
-  "main": "index.js",
+  "description": "DHT circular IDs generator and methods",
+  "main": "src/index.js",
   "scripts": {
-    "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec"
+     "codestyle": "./node_modules/.bin/jscs src/index.js tests/*.js",
+     "lint": "./node_modules/.bin/jshint .",
+     "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec",
+     "test-cov": "node ./node_modules/.bin/lab -t 100 tests/*-test.js",
+     "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js"
   },
+  "precommit": [
+     "codestyle",
+     "lint",
+     "test",
+     "test-cov"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/diasdavid/webrtc-chord-uuid.git"
+    "url": "https://github.com/diasdavid/dht-id.git"
   },
   "keywords": [
     "uuid",
-    "chord",
+    "id",
     "unique",
     "id",
-    "sha1"
+    "sha1",
+    "dht"
   ],
   "author": "David Dias <daviddias.p@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diasdavid/webrtc-chord-uuid/issues"
+    "url": "https://github.com/diasdavid/dht-id/issues"
   },
-  "homepage": "https://github.com/diasdavid/webrtc-chord-uuid",
+  "homepage": "https://github.com/diasdavid/dht-id",
   "dependencies": {
     "git-sha1": "^0.1.2"
   },
   "devDependencies": {
     "code": "^1.2.1",
+    "jscs": "^1.10.0",
+    "jshint": "^2.5.11",
     "lab": "^5.0.2",
+    "precommit-hook": "^1.0.7",
     "tap-spec": "^1.0.1"
   }
 }
