@@ -10,7 +10,6 @@ function Id(_id) {
     var hex;
 
     if (typeof _id === 'number') {
-        console.log('vai ao number', _id) 
         dec = _id;
         var tmp = ('00000000000000' + _id.toString(16));
         hex = tmp.substring(tmp.length - 12, tmp.length);
@@ -58,4 +57,3 @@ exports.spin = function() {
 exports.hash = function(content) {
     return sha1(content).substring(0, 12);
 };
-
