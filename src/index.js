@@ -9,16 +9,19 @@ function Id(_id) {
     var dec;
     var hex;
 
-    if (_id && (typeof _id === 'number')) {
+    if (typeof _id === 'number') {
+        console.log('vai ao number', _id) 
         dec = _id;
         var tmp = ('00000000000000' + _id.toString(16));
         hex = tmp.substring(tmp.length - 12, tmp.length);
-    } else if (_id && (typeof _id === 'string')) {
+    }
+    if (typeof _id === 'string') {
         dec = parseInt(_id, 16);
         hex = _id;
-    } else {
+    }
+    if (typeof _id === 'undefined') {
         hex = sha1((~~(Math.random() * 1e9)).toString(36) + Date.now())
-                .substring(0, 12);
+            .substring(0, 12);
         dec = parseInt(hex, 16);
     }
 
@@ -55,3 +58,4 @@ exports.spin = function() {
 exports.hash = function(content) {
     return sha1(content).substring(0, 12);
 };
+
