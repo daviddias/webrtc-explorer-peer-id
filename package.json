@@ -1,6 +1,6 @@
 {
   "name": "dht-id",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "DHT circular IDs generator and methods",
   "main": "src/index.js",
   "scripts": {
