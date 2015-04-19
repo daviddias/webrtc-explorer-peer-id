@@ -8,13 +8,15 @@
     "lint": "./node_modules/.bin/jshint .",
     "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec",
     "test-cov": "node ./node_modules/.bin/lab -t 100 tests/*-test.js",
-    "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js"
+    "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js",
+    "requiresafe": "./node_modules/.bin/requiresafe check"
   },
   "precommit": [
     "codestyle",
     "lint",
     "test",
-    "test-cov"
+    "test-cov",
+    "requiresafe"
   ],
   "repository": {
     "type": "git",
@@ -43,6 +45,7 @@
     "jshint": "^2.5.11",
     "lab": "^5.0.2",
     "precommit-hook": "^1.0.7",
+    "requiresafe": "^1.2.2",
     "tap-spec": "^1.0.1"
   }
 }
