@@ -4,12 +4,12 @@
   "description": "DHT circular IDs generator and methods",
   "main": "src/index.js",
   "scripts": {
+    "requiresafe": "./node_modules/.bin/requiresafe check",
     "codestyle": "./node_modules/.bin/jscs src/index.js tests/*.js",
     "lint": "./node_modules/.bin/jshint .",
     "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec",
     "test-cov": "node ./node_modules/.bin/lab -t 100 tests/*-test.js",
-    "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js",
-    "requiresafe": "./node_modules/.bin/requiresafe check"
+    "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js"
   },
   "precommit": [
     "codestyle",
