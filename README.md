@@ -10,6 +10,8 @@ DHT-ID
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/diasdavid/dht-id?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![Dependency Status](https://david-dm.org/diasdavid/dht-id.svg)](https://david-dm.org/diasdavid/dht-id)[![Build Status](https://travis-ci.org/diasdavid/dht-id.svg)](https://travis-ci.org/diasdavid/dht-id)
 
+[![](https://cldup.com/pgZbzoshyV-3000x3000.png)](http://www.gsd.inesc-id.pt/)
+
 # Properties
 
 - Uses sha1 to guarantee that ID's are generated with an uniform distribution 
