@@ -17,7 +17,7 @@ More info on the team's work at:
 
 If you use this project, please acknowledge it in your work by referencing the following document:
 
-David Dias and Luís Veiga. browserCloud.js A federated community cloud served by a P2P overlay network on top of the web platform. INESC-ID Tec. Rep. 14/2015, Apr. 2015 (under submission)
+David Dias and Luís Veiga. browserCloud.js A federated community cloud served by a P2P overlay network on top of the web platform. INESC-ID Tec. Rep. 14/2015, Apr. 2015
 
 # Badgers
 
