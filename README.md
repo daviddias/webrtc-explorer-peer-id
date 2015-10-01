@@ -1,16 +1,29 @@
-DHT-ID
-==================
+dht-id
+======
 
-> DHT-ID generator and operator, designed with circular Id namespaces in mind, used in [`webrtc-explorer`](https://github.com/diasdavid/webrtc-explorer). Currently only supports 48 bits, but I'm happy to make accept PR that make it Id size agnostic.
+> dht-id generator and operator, designed with circular Id namespaces in mind, used in [`webrtc-explorer`](https://github.com/diasdavid/webrtc-explorer). Currently only supports 48 bits, but I'm happy to make accept PR that make it Id size agnostic.
 
+## Project Information
+
+> [David Dias MSc in Peer-to-Peer Networks by Technical University of Lisbon](https://github.com/diasdavid/browserCloudjs#research-and-development)
+
+[![](https://img.shields.io/badge/INESC-GSD-brightgreen.svg?style=flat-square)](http://www.gsd.inesc-id.pt/) [![](https://img.shields.io/badge/TÉCNICO-LISBOA-blue.svg?style=flat-square)](http://tecnico.ulisboa.pt/) [![](https://img.shields.io/badge/project-browserCloudjs-blue.svg?style=flat-square)](https://github.com/diasdavid/browserCloudjs)
+
+This work was developed by David Dias with supervision by Luís Veiga, all in INESC-ID Lisboa (Distributed Systems Group), Instituto Superior Técnico, Universidade de Lisboa, with the support of Fundação para a Ciência e Tecnologia. 
+
+More info on the team's work at: 
+- http://daviddias.me
+- http://www.gsd.inesc-id.pt/~lveiga
+
+If you use this project, please acknowledge it in your work by referencing the following document:
+
+David Dias and Luís Veiga. browserCloud.js A federated community cloud served by a P2P overlay network on top of the web platform. INESC-ID Tec. Rep. 14/2015, Apr. 2015 (under submission)
 
 # Badgers
 
 [![NPM](https://nodei.co/npm/dht-id.png?downloads=true&stars=true)](https://nodei.co/npm/dht-id/)
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/diasdavid/dht-id?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![Dependency Status](https://david-dm.org/diasdavid/dht-id.svg)](https://david-dm.org/diasdavid/dht-id)[![Build Status](https://travis-ci.org/diasdavid/dht-id.svg)](https://travis-ci.org/diasdavid/dht-id)
-
-[![](https://cldup.com/pgZbzoshyV-3000x3000.png)](http://www.gsd.inesc-id.pt/)
 
 # Properties
 
@@ -36,6 +49,4 @@ idA.next(); // basically this id + 1, useful to send to Sucessor
 Id.spin(); // returns an id larger than the max possible in Hex, useful when the message has to spin the ring
 
 Id.hash(content); // convinient way to find the Id of a content and guarantee that it has our ideal id length
-
-
 ```
