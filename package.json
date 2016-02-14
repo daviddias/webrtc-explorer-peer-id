@@ -1,26 +1,19 @@
 {
-  "name": "dht-id",
+  "name": "webrtc-explorer-peer-id",
   "version": "1.0.3",
-  "description": "DHT circular IDs generator and methods",
+  "description": "webrtc-explorer utility for peer Id generation",
   "main": "src/index.js",
   "scripts": {
-    "requiresafe": "./node_modules/.bin/requiresafe check",
-    "codestyle": "./node_modules/.bin/jscs src/index.js tests/*.js",
-    "lint": "./node_modules/.bin/jshint .",
-    "test": "node ./node_modules/.bin/lab -r tap tests/*-test.js | ./node_modules/.bin/tap-spec",
-    "test-cov": "node ./node_modules/.bin/lab -t 100 tests/*-test.js",
-    "test-cov-html": "node ./node_modules/.bin/lab -r html -o coverage.html tests/*-test.js"
+    "lint": "standard",
+    "test": "mocha tests/test-*.js"
   },
   "precommit": [
-    "codestyle",
     "lint",
-    "test",
-    "test-cov",
-    "requiresafe"
+    "test"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/diasdavid/dht-id.git"
+    "url": "https://github.com/diasdavid/webrtc-explorer-peer-id.git"
   },
   "keywords": [
     "uuid",
@@ -33,19 +26,16 @@
   "author": "David Dias <daviddias.p@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diasdavid/dht-id/issues"
+    "url": "https://github.com/diasdavid/webrtc-explorer-peer-id/issues"
   },
-  "homepage": "https://github.com/diasdavid/dht-id",
+  "homepage": "https://github.com/diasdavid/webrtc-explorer-peer-id",
   "dependencies": {
     "git-sha1": "^0.1.2"
   },
   "devDependencies": {
-    "code": "^1.2.1",
-    "jscs": "^1.10.0",
-    "jshint": "^2.5.11",
-    "lab": "^5.0.2",
-    "precommit-hook": "^1.0.7",
-    "requiresafe": "^1.2.2",
-    "tap-spec": "^1.0.1"
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "pre-commit": "^1.1.2",
+    "standard": "^6.0.5"
   }
 }
