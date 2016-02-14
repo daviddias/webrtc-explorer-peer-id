@@ -1,7 +1,7 @@
-dht-id
+webrtc-explorer-peer-id
 ======
 
-> dht-id generator and operator, designed with circular Id namespaces in mind, used in [`webrtc-explorer`](https://github.com/diasdavid/webrtc-explorer). Currently only supports 48 bits, but I'm happy to make accept PR that make it Id size agnostic.
+> Peer Id generator and operator, designed with circular Id namespaces in mind, used in [`webrtc-explorer`](https://github.com/diasdavid/webrtc-explorer). Currently only supports 48 bits, but I'm happy to make accept PR that make it Id size agnostic.
 
 ## Project Information
 
@@ -21,9 +21,9 @@ David Dias and Luís Veiga. browserCloud.js A federated community cloud served b
 
 # Badgers
 
-[![NPM](https://nodei.co/npm/dht-id.png?downloads=true&stars=true)](https://nodei.co/npm/dht-id/)
-
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/diasdavid/dht-id?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)[![Dependency Status](https://david-dm.org/diasdavid/dht-id.svg)](https://david-dm.org/diasdavid/dht-id)[![Build Status](https://travis-ci.org/diasdavid/dht-id.svg)](https://travis-ci.org/diasdavid/dht-id)
+[![NPM](https://nodei.co/npm/webrtc-explorer-peer-id.png?downloads=true&stars=true)](https://nodei.co/npm/webrtc-explorer-peer-id/)
+[![Dependency Status](https://david-dm.org/diasdavid/webrtc-explorer-peer-id.svg)](https://david-dm.org/diasdavid/webrtc-explorer-peer-id)
+[![Build Status](https://travis-ci.org/diasdavid/webrtc-explorer-peer-id.svg)](https://travis-ci.org/diasdavid/webrtc-explorer-peer-id)
 
 # Properties
 
@@ -33,7 +33,7 @@ David Dias and Luís Veiga. browserCloud.js A federated community cloud served b
 
 # How to use
 
-```
+```JavaScript
 var Id = require('dht-id);
 
 var idA = new Id(); // generates a new random Id with 48 bits length
@@ -45,8 +45,6 @@ idA.toHex(); // returns the hex value of the Id in a string
 idA.toDec(); // returns the dec value of the Id in a number
 
 idA.next(); // basically this id + 1, useful to send to Sucessor
-
-Id.spin(); // returns an id larger than the max possible in Hex, useful when the message has to spin the ring
 
 Id.hash(content); // convinient way to find the Id of a content and guarantee that it has our ideal id length
 ```
