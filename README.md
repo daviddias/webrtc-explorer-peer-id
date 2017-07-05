@@ -34,7 +34,7 @@ David Dias and Luís Veiga. browserCloud.js A federated community cloud served b
 # How to use
 
 ```JavaScript
-var Id = require('dht-id);
+var Id = require('dht-id');
 
 var idA = new Id(); // generates a new random Id with 48 bits length
 
